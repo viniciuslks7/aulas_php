@@ -44,7 +44,6 @@ Fique à vontade para expandir, personalizar e aplicar em seus estudos!
 ---
 
 ## Autor
-
-**Seu Nome**  
+ 
 Aluno da FATEC - Curso de Sistemas para Internet 
 E-mail: vinicius.oliveira198@fatec.sp.gov.br
