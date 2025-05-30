@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #00b09b, #96c93d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 6px;
+            border: none;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Formulário 1</h3>
+        <!-- Este formulário envia o valor pelo método GET para valor.php -->
+        <form method="get" action="valor.php">
+            Valor: <input type="text" name="v" placeholder="Digite um número" required />
+            <input type="submit" value="Calcular parte inteira" />
+        </form>
+    </div>
+</body>
+</html>

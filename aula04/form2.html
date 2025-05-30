@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário 2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #00c9ff, #92fe9d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            max-width: 400px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        h3, legend {
+            margin-bottom: 10px;
+        }
+        fieldset {
+            border: 1px solid #fff;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Formulário 2</h3>
+        <!-- Formulário que envia nome, ano de nascimento e sexo via GET para idade.php -->
+        <form method="get" action="idade.php">
+            Nome:
+            <input type="text" name="nome" placeholder="Digite seu nome" required />
+
+            Ano de Nascimento:
+            <input type="number" name="ano" placeholder="Ex: 2000" required />
+
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="masc" value="masculino" required />
+                <label for="masc">Masculino</label><br/>
+                <input type="radio" name="sexo" id="fem" value="feminino" />
+                <label for="fem">Feminino</label>
+            </fieldset>
+
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #8360c3, #2ebf91);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .form-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            background-color: #00ffcc;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Calculadora Simples</h2>
+        <form method="get" action="calculadora.php">
+            Digite o primeiro número:<br>
+            <input type="text" name="n1" required /><br>
+            Digite o segundo número:<br>
+            <input type="text" name="n2" required /><br>
+
+            <fieldset>
+                <legend>Operações:</legend>
+                <input type="radio" name="oper" value="1" required /> Soma<br>
+                <input type="radio" name="oper" value="2" /> Subtração<br>
+                <input type="radio" name="oper" value="3" /> Multiplicação<br>
+                <input type="radio" name="oper" value="4" /> Divisão<br>
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Calcular" />
+        </form>
+    </div>
+</body>
+</html>
