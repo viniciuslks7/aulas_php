@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="../style.css" />
     <meta charset="UTF-8">
     <title>Aula 02 - Hello World</title>
     <style>

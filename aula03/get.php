@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Aula 03 - Método GET</title>
     <style>

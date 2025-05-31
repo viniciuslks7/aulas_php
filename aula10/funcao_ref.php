@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Referência</title>
     <style>

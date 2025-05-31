@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="../nbproject/style.css" />
         <meta charset="UTF-8">
         <title>Resultado do Número Primo</title>
         <style>

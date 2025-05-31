@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="../nbproject/style.css" />
         <meta charset="UTF-8">
         <title>Formulário Matriz - Aula 11</title>
         <style>

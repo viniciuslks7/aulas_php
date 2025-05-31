@@ -1,0 +1,51 @@
+/* estilo básico */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
+/* deixar caixas como form e fieldset centralizados e com largura máxima */
+.form-box, fieldset {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  color: white;
+}
+
+/* inputs e selects com largura 100% */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* botão estilizado */
+input[type=submit] {
+  background-color: #00ffcc;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .form-box, fieldset {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}

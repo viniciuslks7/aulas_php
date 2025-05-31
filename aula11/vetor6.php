@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>vetor6.php - Array multidimensional associativo</title>
     <style>
