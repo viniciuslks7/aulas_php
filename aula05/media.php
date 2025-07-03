@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Resultado da Média</title>
@@ -57,7 +59,9 @@
         }
         ?>
         <br><br>
-        <a href="media.html">← Voltar</a>
+        <a href="media.html" title="← Voltar">{m.group(2)}</a>
     </div>
+    <?php include __DIR__ . '/../vlibra_include.php'; ?>
+    <script src="../accessibility.js"></script>
 </body>
 </html>

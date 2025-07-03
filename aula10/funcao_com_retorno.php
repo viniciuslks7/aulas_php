@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Função com Retorno</title>
@@ -37,5 +39,6 @@
     echo "<p><em>Explicação:</em> A função retorna o valor da soma, que pode ser usado posteriormente.</p>";
     ?>
 </div>
+        <script src="../accessibility.js"></script>
 </body>
 </html>

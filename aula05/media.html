@@ -2,6 +2,8 @@
 <html lang="pt-br">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8" />
     <title>Verificar Média</title>
@@ -66,7 +68,7 @@
     <div class="form-box">
         <h3>Calcular Média do Aluno</h3>
         <form method="get" action="media.php">
-            Nome: <input type="text" name="nome" required />
+            Nome: <input type="text" name="nome" required / aria-label="Nome">
             Nota 1: <input type="number" name="nota1" step="0.01" required />
             Nota 2: <input type="number" name="nota2" step="0.01" required />
             Nota 3: <input type="number" name="nota3" step="0.01" required />
@@ -74,6 +76,9 @@
             <input type="submit" value="Verificar" />
         </form>
     </div>
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <script src="../accessibility.js"></script>
 </body>
 
 </html>

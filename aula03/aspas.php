@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Aula 03 - Aspas</title>
@@ -71,5 +73,7 @@
             <p>Por isso, a linha <code>echo "Eu tenho um $carro";</code> mostra <em>Eu tenho um Camaro</em>, enquanto <code>echo 'Eu tenho um $carro';</code> mostra <em>Eu tenho um $carro</em> literalmente.</p>
         </div>
     </div>
+    <?php include __DIR__ . '/../vlibra_include.php'; ?>
+    <script src="../accessibility.js"></script>
 </body>
 </html>

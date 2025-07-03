@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>vetor3.php - Array com tipos mistos</title>
@@ -31,6 +33,7 @@
     </style>
 </head>
 <body>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
 <div class="container">
     <?php
     $mix[] = "José";
@@ -49,5 +52,6 @@
     echo "</pre>";
     ?>
 </div>
+        <script src="../accessibility.js"></script>
 </body>
 </html>

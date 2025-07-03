@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
         <link rel="stylesheet" href="../nbproject/style.css" />
         <meta charset="UTF-8">
         <title>Formulário Matriz - Aula 11</title>
@@ -48,6 +50,7 @@
         </style>
     </head>
     <body>
+        <?php include __DIR__ . '/../vlibra_include.php'; ?>
         <form method="get" action="exe02_mostra.php">
             <?php
             // Criando campos para matriz 2 linhas x 4 colunas
@@ -60,5 +63,6 @@
             ?>
             <input type="submit" value="Enviar"/>
         </form>
-    </body>
+            <script src="../accessibility.js"></script>
+</body>
 </html>

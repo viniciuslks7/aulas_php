@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
         <link rel="stylesheet" href="../nbproject/style.css" />
         <meta charset="UTF-8">
         <title>Resultado do Número Primo</title>
@@ -56,5 +58,7 @@
             ?>
             <br><a href='primo.html'>Voltar</a>
         </div>
-    </body>
+            <script src="../accessibility.js"></script>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
+</body>
 </html>

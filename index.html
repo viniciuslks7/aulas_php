@@ -3,15 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Navegador de Aulas PHP</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accessibility.css">
+
+  <!-- Skip Link (para navegação por teclado) -->
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: 100;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+    }
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      width: auto;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
+
+  <!-- Link para pular direto para o conteúdo principal -->
+  <a href="#lista-aulas" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- Conteúdo principal -->
+  <main class="container" role="main" tabindex="-1">
     <h1>Aulas de PHP - Interface de Navegação</h1>
-    <section id="lista-aulas" class="accordion-list"></section>
+    <section id="lista-aulas" class="accordion-list" aria-label="Lista de aulas em PHP"></section>
   </main>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="accessibility.js"></script>
 </body>
 </html>

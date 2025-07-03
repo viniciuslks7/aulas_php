@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Sem Parâmetros</title>
@@ -24,6 +26,7 @@
     </style>
 </head>
 <body>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
 <div class="container">
     <?php
     function bemVindo(){ echo "<p align='center'>Olá, seja bem vindo! </p>"; }
@@ -31,5 +34,6 @@
     for($i = 1; $i <= 5; $i++){ bemVindo(); }
     ?>
 </div>
+        <script src="../accessibility.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
         <link rel="stylesheet" href="../nbproject/style.css" />
         <meta charset="UTF-8">
         <title>Função com Parâmetros</title>
@@ -45,5 +47,7 @@
             soma($x, $y);
             ?>
         </div>
-    </body>
+            <script src="../accessibility.js"></script>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
+</body>
 </html>

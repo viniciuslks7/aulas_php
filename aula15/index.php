@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8" />
     <title>Aula 15 - Construtor e Encapsulamento</title>
@@ -34,6 +36,7 @@
     </style>
 </head>
 <body>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
 <div class="container">
 <pre>
 <?php
@@ -81,5 +84,6 @@ var_dump($onibus);
 ?>
 </pre>
 </div>
+        <script src="../accessibility.js"></script>
 </body>
 </html>

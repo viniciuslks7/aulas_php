@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Aula 03 - Comentários</title>
@@ -80,5 +82,7 @@
             <p>Comentários são ignorados pelo interpretador PHP e servem apenas como anotações no código.</p>
         </div>
     </div>
+    <?php include __DIR__ . '/../vlibra_include.php'; ?>
+    <script src="../accessibility.js"></script>
 </body>
 </html>

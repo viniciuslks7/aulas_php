@@ -1,0 +1,392 @@
+/* Arquivo CSS para funcionalidades de acessibilidade - VERSÃO FINAL */
+
+/* Variáveis CSS para temas */
+:root {
+  /* Tema claro (padrão) */
+  --bg-color-start: #f0f2f5; /* Cor inicial do gradiente para tema claro */
+  --bg-color-end: #e0e5ec;   /* Cor final do gradiente para tema claro */
+  --text-color: #333333;
+  --primary-color: #0056b3; /* Azul mais escuro para melhor contraste no foco */
+  --secondary-color: #6c757d;
+  --border-color: #dee2e6;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --link-color: #007bff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Tamanhos de fonte */
+  --font-size-small: 14px;
+  --font-size-normal: 16px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 20px;
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --bg-color-start: #0f2027; /* Cor inicial do gradiente para tema escuro */
+  --bg-color-end: #2c5364;   /* Cor final do gradiente para tema escuro */
+  --text-color: #e0e0e0;
+  --primary-color: #4dabf7;
+  --secondary-color: #adb5bd;
+  --border-color: #495057;
+  --input-bg: #2d3748;
+  --input-border: #4a5568;
+  --button-bg: #4dabf7;
+  --button-text: #1a1a1a;
+  --link-color: #4dabf7;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Tema de alto contraste */
+[data-theme="high-contrast"] {
+  --bg-color-start: #000000;
+  --bg-color-end: #333333;
+  --text-color: #ffffff;
+  --primary-color: #ffff00;
+  --secondary-color: #ffffff;
+  --border-color: #ffffff;
+  --input-bg: #000000;
+  --input-border: #ffffff;
+  --button-bg: #ffff00;
+  --button-text: #000000;
+  --link-color: #ffff00;
+  --shadow: rgba(255, 255, 255, 0.3);
+}
+
+/* APLICAÇÃO GLOBAL DOS TEMAS - AGORA COM GRADIENTES INTERATIVOS */
+html, body {
+  background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end)) !important; /* Aplicar gradiente com variáveis */
+  color: var(--text-color) !important;
+  font-size: var(--font-size-normal);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Aplicar temas a todos os elementos principais */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Containers e divs principais */
+.container, .form-container, .result-box, main, section, article, div {
+  /* Manter background original para elementos internos se não for tema de alto contraste */
+  /* Isso permite que o container tenha seu próprio background, mas o texto e bordas sigam o tema */
+  color: var(--text-color) !important;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color) !important;
+}
+
+/* Parágrafos e texto */
+p, span, label, li, td, th {
+  color: var(--text-color) !important;
+}
+
+/* Controles de acessibilidade */
+.accessibility-controls {
+  position: fixed;
+  top: 50%; /* Centralizar verticalmente */
+  right: 20px; /* Mais afastado da borda */
+  transform: translateY(-50%); /* Ajuste para centralização perfeita */
+  background: var(--bg-color-start) !important; /* Usar cor inicial do gradiente para o painel */
+  border: 2px solid var(--border-color) !important;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px var(--shadow);
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.accessibility-controls h4 {
+  margin: 0 0 15px 0;
+  color: var(--text-color) !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color) !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.control-group button {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 10px 15px;
+  margin: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  min-width: 45px;
+}
+
+.control-group button:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.control-group button:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+}
+
+.control-group button.active {
+  background: var(--primary-color) !important;
+  color: var(--button-text) !important;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.control-group select {
+  background: var(--input-bg) !important;
+  color: var(--text-color) !important;
+  border: 2px solid var(--input-border) !important;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.control-group select:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+  border-color: var(--primary-color) !important;
+}
+
+/* Toggle para mostrar/ocultar controles */
+.accessibility-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  transform: none;
+  background: var(--primary-color) !important;
+  color: var(--button-text) !important;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1001;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.accessibility-toggle:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.accessibility-toggle:focus {
+  outline: 3px solid var(--text-color) !important;
+  outline-offset: 3px;
+}
+
+/* Seção de atalhos */
+.shortcuts-info {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.shortcuts-info h5 {
+  margin: 0 0 8px 0;
+  color: var(--text-color) !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.shortcuts-info ul {
+  margin: 0;
+  padding-left: 15px;
+  list-style-type: disc;
+}
+
+.shortcuts-info li {
+  margin-bottom: 4px;
+  color: var(--text-color) !important;
+}
+
+.shortcuts-info code {
+  background: var(--border-color) !important;
+  color: var(--text-color) !important;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* Estilos para elementos de formulário */
+input, textarea, select {
+  background-color: var(--input-bg) !important;
+  color: var(--text-color) !important;
+  border: 2px solid var(--input-border) !important;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+  border-color: var(--primary-color) !important;
+}
+
+/* Estilos para botões */
+button:not(.accessibility-toggle):not(.accessibility-controls button), 
+input[type="submit"], 
+input[type="button"] {
+  background-color: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: 2px solid var(--border-color) !important;
+  transition: all 0.3s ease;
+}
+
+button:not(.accessibility-toggle):not(.accessibility-controls button):focus, 
+input[type="submit"]:focus, 
+input[type="button"]:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+}
+
+/* Estilos para links */
+a {
+  color: var(--link-color) !important;
+  transition: all 0.3s ease;
+}
+
+a:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+}
+
+/* Classes para tamanhos de fonte */
+.font-small, .font-small * {
+  font-size: var(--font-size-small) !important;
+}
+
+.font-normal, .font-normal * {
+  font-size: var(--font-size-normal) !important;
+}
+
+.font-large, .font-large * {
+  font-size: var(--font-size-large) !important;
+}
+
+.font-xlarge, .font-xlarge * {
+  font-size: var(--font-size-xlarge) !important;
+}
+
+/* Skip link para navegação por teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color) !important;
+  color: var(--button-text) !important;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1002;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Indicador de foco visível */
+*:focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px;
+}
+
+/* Responsividade para controles de acessibilidade */
+@media (max-width: 768px) {
+  .accessibility-controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    transform: translateY(0); /* Remover transformação para mobile */
+    width: auto;
+    min-width: auto;
+  }
+  
+  .accessibility-toggle {
+    top: 10px;
+    right: 10px;
+    transform: translateY(0); /* Remover transformação para mobile */
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+/* Melhorias específicas para elementos existentes */
+.form-container, .result-box {
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Estilos para as aulas na lista */
+.accordion-header {
+  background: var(--primary-color) !important; /* Fundo do cabeçalho da aula */
+  color: var(--button-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.accordion-header:hover {
+  background: var(--primary-color) !important;
+  opacity: 0.9;
+}
+
+.accordion-content {
+  background: var(--input-bg) !important; /* Fundo do conteúdo da aula */
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.accordion-content a {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.accordion-content a:hover {
+  background: var(--button-bg) !important;
+  opacity: 0.9;
+}
+
+/* Posiciona o botão do VLibras no canto superior direito */
+[vw-access-button] {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  z-index: 2000 !important;
+}
+
+

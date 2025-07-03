@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>vetor5.php - Array Multidimensional</title>
@@ -31,6 +33,7 @@
     </style>
 </head>
 <body>
+<?php include __DIR__ . '/../vlibra_include.php'; ?>
 <div class="container">
     <?php
     $numeros[0][0] = 5;
@@ -55,5 +58,6 @@
     }
     ?>
 </div>
+        <script src="../accessibility.js"></script>
 </body>
 </html>

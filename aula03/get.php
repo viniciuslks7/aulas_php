@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../accessibility.css">
     <link rel="stylesheet" href="../nbproject/style.css" />
     <meta charset="UTF-8">
     <title>Aula 03 - Método GET</title>
@@ -80,10 +82,12 @@
             </ul>
             <p><strong>Exemplo de uso:</strong></p>
             <p>Acesse a página assim: <br>
-                <a href="?a=10&b=5">get.php?a=10&b=5</a> ou digite manualmente na URL: <br>
+                <a href="?a=10&b=5" title="get.php?a=10&b=5">{m.group(2)}</a> ou digite manualmente na URL: <br>
                 <code>localhost:8080/aulas_php/aula03/get.php?a=10&b=5</code>
             </p>
         </div>
     </div>
+    <?php include __DIR__ . '/../vlibra_include.php'; ?>
+    <script src="../accessibility.js"></script>
 </body>
 </html>
